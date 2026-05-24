@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesoros del Perú | Sabores y Legado</title>
+    <meta name="description" content="Descubre la riqueza de la gastronomía peruana y sus lugares históricos más impresionantes.">
+    <meta name="keywords" content="Perú, Recetas, Gastronomía, Turismo, Machu Picchu, Ceviche, Historia">
+    <meta property="og:title" content="Tesoros del Perú">
+    <meta property="og:description" content="Explora las recetas y lugares históricos del Perú.">
+    <meta name="twitter:title" content="Tesoros del Perú">
+    <meta name="twitter:description" content="Explora las recetas y lugares históricos del Perú.">
+
+    <!-- React & Babel -->
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary: #C8102E; /* Rojo Perú (Alto contraste) */
+            --secondary: #111111; /* Negro Profundo */
+            --accent: #F1C40F; /* Oro Inca */
+            --bg-light: #FFFFFF; /* Blanco Puro */
+            --text-main: #000000; /* Texto Negro Puro */
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+    }
+
+    @layer components {
+        .btn {
+            @apply px-6 py-3 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2;
+        }
+        .btn-primary {
+            @apply bg-[var(--primary)] text-white hover:bg-orange-700 shadow-lg hover:shadow-xl;
+        }
+        .btn-outline {
+            @apply border-2 border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white;
+        }
+        .card-hover {
+            @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- Data -->
+    <script type="text/babel" src="data/mockData.js"></script>
+
+    <!-- Components -->
+    <script type="text/babel" src="components/Greeting.js"></script>
+    <script type="text/babel" src="components/Modal.js"></script>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="components/Card.js"></script>
+    <script type="text/babel" src="components/Hero.js"></script>
+    <script type="text/babel" src="components/FeaturedSection.js"></script>
+
+    <!-- App Entry -->
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>

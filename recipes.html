@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas Peruanas | Tesoros del Perú</title>
+    
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary: #C8102E;
+            --secondary: #111111;
+            --accent: #F1C40F;
+            --bg-light: #FFFFFF;
+            --text-main: #000000;
+        }
+    }
+    @layer base {
+        body { font-family: 'Lato', sans-serif; color: var(--text-main); background-color: var(--bg-light); }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+    }
+    @layer components {
+        .btn { @apply px-6 py-3 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2; }
+        .btn-primary { @apply bg-[var(--primary)] text-white hover:bg-orange-700 shadow-lg; }
+        .card-hover { @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl; }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="data/mockData.js"></script>
+    <script type="text/babel" src="components/Greeting.js"></script>
+    <script type="text/babel" src="components/Modal.js"></script>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="components/Card.js"></script>
+    <script type="text/babel" src="recipes-app.js"></script>
+</body>
+</html>
